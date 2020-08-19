@@ -1,0 +1,27 @@
+{
+  "name": "proyecto_tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack:development": "webpack --mode development",
+    "webpack:production": "webpack --mode=production",
+    "postcss:build": "postcss src/styles.css -o dist/styles.css",
+    "deploy": "npm run webpack:production & npm run postcss:build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "autoprefixer": "^9.8.6",
+    "css-loader": "^4.2.1",
+    "mini-css-extract-plugin": "^0.10.0",
+    "postcss-cli": "^7.1.1",
+    "postcss-loader": "^3.0.0",
+    "purgecss-webpack-plugin": "^2.3.0",
+    "tailwindcss": "^1.7.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {}
+}
