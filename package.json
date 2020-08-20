@@ -4,19 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack:development": "webpack --mode development",
+    "webpack:development": "webpack --mode=development",
     "webpack:production": "webpack --mode=production",
     "postcss:build": "postcss src/css/style.css -o dist/assets/css/style.css",
-    "deploy": "npm run webpack:production & npm run postcss:build"
+    "postcss:minify": "postcss dist/assets/css/style.css > dist/assets/css/style-minify.css",
+    "deploy": "npm run webpack:production & npm run postcss:build & npm run postcss:minify"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "cssnano": "^4.1.10",
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
     "purgecss-webpack-plugin": "^2.3.0",
-    "tailwindcss": "^1.7.1"
+    "tailwindcss": "^1.7.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {}
 }
