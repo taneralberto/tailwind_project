@@ -6,8 +6,10 @@ const postcssConfig = {
         require('tailwindcss'),
         require('autoprefixer'),
         purgecss({
-            content: ['./**/*html', './**/*.php'],
+            content: ['./**/*.html', './**/*.php'],
             defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+            //defaultExtractor: content => content.match(/[A-z0-9-:\/]+/g) || [],
+            //css: ['src/css/tailwind.css']
         })
     ]
 }

@@ -1,3 +1,15 @@
 header {
     background: green;
 }
+
+.my-element{
+    background: red;
+}
+
+.another-element .otro-elemento{
+    color: white;
+}
+
+.mi-clase-que-no-existe{
+    font-size: 24px;
+}

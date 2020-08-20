@@ -4,8 +4,6 @@
 
 @tailwind components;
 
-.container {
-    @apply bg-blue-500;
-}
+
 
 @tailwind utilities;
